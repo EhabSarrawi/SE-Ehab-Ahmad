@@ -10,6 +10,6 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features="use_cases",
 glue = "Test", plugin= {"html: target/cucumber.html"}
 )
-public class Test {
+public class Tests {
 
 }

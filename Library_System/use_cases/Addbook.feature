@@ -18,6 +18,6 @@ When Admin with username "Ehab" is already logged in add a book with title "We B
 Then Book will be added
 
 Scenario: Add a book when admin is not logged in
-When Admin is not logged in and try to add book
+When Admin with username "Ahmad" is not logged in and try to add book
 Then Book should be not added
  
