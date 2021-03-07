@@ -37,4 +37,7 @@ public boolean isAnAAdmin() {
 public void setUser_level(int user_level) {
 	this.user_level = user_level;
 }
+public void logout() {
+	status= false;
+}
 }
