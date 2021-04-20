@@ -6,9 +6,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import Library_System.Book;
-import Library_System.User;
 import io.cucumber.java.en.*;
+import librarysystem.Book;
+import librarysystem.User;
 
 public class searchBookSteps {
 	private  ArrayList <User> A1= new ArrayList <User>();
@@ -20,6 +20,7 @@ public class searchBookSteps {
 	private User User_1 = null;
 	private Book book = null;
 	private Book book1 = null;
+	private User inUser;
 	
 
 	@Given("these are the users we will but it in the table as a format User\\(Name,password,user_level,status) noting that user level_{int} is Admin and user level_{int} is a normal user and status indicates whether user is logged in or not")
@@ -51,7 +52,7 @@ public class searchBookSteps {
 	}
 	@When("User or Admin want to search for a book by a subtitle like {string}")
 	public void user_or_admin_want_to_search_for_a_book_by_a_subtitle_like(String string) {
-		book1.SearchTitle(B1, string);
+		book1.searchforAll(B1, string);
 		assertTrue(true);
 
 		
@@ -60,7 +61,7 @@ public class searchBookSteps {
 
 	@Then("The book should be appeared")
 	public void the_book_should_be_appeared() {	
-		if(book1.CheckIfThereisAbook(B1.get(0).getAuthor())) {
+		if(book1.checkifabookExcist(B1.get(0).getAuthor())) {
 			assertFalse(false);
   }
 		else {
@@ -73,7 +74,7 @@ public class searchBookSteps {
 
 	@When("User or Admin want to search for a book by a subauthor like {string}")
 	public void user_or_admin_want_to_search_for_a_book_by_a_subauthor_like(String string) {
-		book1.SearchAuthor(B1,string);
+		book1.searchforAll(B1, string);
 		assertTrue(true);
 
 
@@ -82,13 +83,13 @@ public class searchBookSteps {
 
 	@When("User or Admin want to search for a book by a subISBN like {string}")
 	public void user_or_admin_want_to_search_for_a_book_by_a_sub_isbn_like(String string) {
-		book1.SearchIsbn(B1,string);  
+		book1.searchforAll(B1, string);
 		assertTrue(true);
 	}
 
 	@When("Admin with username {string} and password {string} wants to search for a book like {string}")
 	public void admin_with_username_and_password_wants_to_search_for_a_book_like(String string, String string2, String string3) {
-		book1.SearchForBookWhileIn(B1, U1, string, string2, string3);
+		book1.searchforbookwhileIn(B1, U1, string, string2, string3);
 		assertTrue(true);
 
 	
@@ -97,7 +98,7 @@ public class searchBookSteps {
 	@When("User or Admin want to search for a book by substring like {string}")
 	public void user_or_admin_want_to_search_for_a_book_by_substring_like(String string) {
 	 
-      book1.SearchForUnExsictBook(B1, string);
+      book1.searchforunexsictBook(B1, string);
 		assertFalse(false);
 
       
@@ -105,13 +106,13 @@ public class searchBookSteps {
 
 	@Then("Warning massege will appeared")
 	public void warning_massege_will_appeared() {
-	   book1.CheckWhenThereIsNoBook(B1.get(0).getTitle());
+	   book1.checkwhenthereisnoBook(B1.get(0).getTitle());
 		assertFalse(false);
 
 	}
 	@When("User or Admin want to search for more than one book like {string}")
 	public void user_or_admin_want_to_search_for_more_than_one_book_like(String string) {
-		book1.searching_for_more_than_book(B1, string);
+		book1.searchingformorethanBook(B1, string);
 		assertTrue(true);
 
 	   
@@ -121,7 +122,7 @@ public class searchBookSteps {
 
 	@Then("The books should be appeared")
 	public void the_books_should_be_appeared() {
-		if(book1.CheckIfThereisMoreThanABook(B1.get(0).getTitle())) {
+		if(book1.checkifthereismorethanaBook(B1.get(0).getTitle())) {
 			assertTrue(true);   
 
 			

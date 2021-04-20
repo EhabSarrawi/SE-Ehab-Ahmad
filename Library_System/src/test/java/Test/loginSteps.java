@@ -1,13 +1,15 @@
 package Test;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Library_System.User;
 import io.cucumber.java.en.*;
+import junit.framework.Assert;
+import librarysystem.User;
 
 public class loginSteps {
 	private  ArrayList <User> u1= new ArrayList <User>();
@@ -29,7 +31,7 @@ public class loginSteps {
 	@When("Admin enters {string} as a user name and enters {string} as password")
 	public void admin_enters_as_a_user_name_and_enters_as_password(String string, String string2) {
 	    inUser = new User(string,string2,1,false);
-	    assertTrue(inUser!=null);
+	    Assert.assertNotNull(inUser);
 	    
 	}
 
@@ -42,7 +44,7 @@ public class loginSteps {
 				break;
 			}
 		}
-		assertTrue(e!=-1);
+		  Assert.assertNotNull(e);
 	}
 
 	@Then("Error messege should be appeared")

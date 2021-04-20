@@ -1,18 +1,19 @@
 package Test;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
-
 import io.cucumber.java.en.*;
+import junit.framework.Assert;
+import librarysystem.Book;
+import librarysystem.User;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import Library_System.Book;
-import Library_System.User;
 public class addbookSteps {
 	private  ArrayList <User> u1= new ArrayList <User>();
 	private  ArrayList <Book> b1= new ArrayList <Book>();
@@ -49,13 +50,13 @@ public class addbookSteps {
 				if(inUser.isStatus()){
 					
 					t=i;
-					book.Addbook(u1, b1, string, string2, string3, string4, string5, string6);
+					book.addBook(u1, b1, string, string2, string3, string4, string5);
 					break;
 				}
 				else {t=-1;}
 			}
 		}
-	    assertTrue(t!=-1);
+		  Assert.assertNotNull(t);
 	    
 	}
 
@@ -76,7 +77,7 @@ public class addbookSteps {
 				if(inUser.isAnAAdmin()){
 				if(!inUser.isStatus()){
 					e=i;
-					book.NotAdmin(u1, string);
+					book.notAdmin(u1, string);
 					break;
 				}
 				else {e=-1;}
@@ -85,7 +86,7 @@ public class addbookSteps {
 			}
 			
 		}
-	    assertTrue(e!=-1);
+	    Assert.assertNotNull(e);
 	    
 	}
 

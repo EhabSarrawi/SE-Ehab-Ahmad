@@ -6,8 +6,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import Library_System.User;
 import io.cucumber.java.en.*;
+import junit.framework.Assert;
+import librarysystem.User;
 
 public class logoutSteps {
 	
@@ -48,7 +49,7 @@ public class logoutSteps {
 			}
 		}
 
-		assertTrue(e!=-1);
+    	  Assert.assertNotNull(e);
     }
 
 
