@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="Test.searchBookSteps" project="Library_System" 
     file="/Library_System/src/test/java/Test/searchBookSteps.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="446" width="1510" x="-797" y="217"/>    
+    <position height="453" width="813" x="-783" y="358"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="Test.loginSteps" project="Library_System" 
     file="/Library_System/src/test/java/Test/loginSteps.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="230" width="1510" x="789" y="349"/>    
+    <position height="274" width="951" x="-773" y="60"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="Test.logoutSteps" project="Library_System" 
     file="/Library_System/src/test/java/Test/logoutSteps.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="212" width="1481" x="2342" y="346"/>    
+    <position height="234" width="807" x="218" y="210"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="Test.addbookSteps" project="Library_System" 
     file="/Library_System/src/test/java/Test/addbookSteps.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="320" width="1464" x="4004" y="320"/>    
+    <position height="371" width="939" x="80" y="458"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="Test.Tests" project="Library_System" 
     file="/Library_System/src/test/java/Test/Tests.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="104" width="656" x="1949" y="77"/>    
+    <position height="104" width="656" x="208" y="61"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
